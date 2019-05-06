@@ -14,7 +14,7 @@ ENV BACKUP_WEEKLY=3
 ENV BACKUP_MONTHLY=3
 ENV BACKUP_YEARLY=3
 
-RUN touch /ssh/ssh-id && touch /backup.cfg
+RUN touch /ssh/ssh-id && touch /backup.cfg && ln -s /ssh/ssh-id /ssh-id
 
 RUN apk add --update rsnapshot
 
